@@ -1,0 +1,11 @@
+{
+    "require": {
+        "doctrine/orm": "^2.20",
+        "doctrine/annotations": "^2.0",
+        "doctrine/cache": "^2.2",
+        "symfony/cache": "^7.2"
+    },
+    "autoload": {
+        "psr-0": {"":"config/yml/"}
+    }
+}
