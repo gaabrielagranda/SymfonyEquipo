@@ -51,6 +51,10 @@ class ComposerStaticInit07fdc439b1832f50b08e19b7b0de2634
             'Doctrine\\Common\\Annotations\\' => 28,
             'Doctrine\\Common\\' => 16,
         ),
+        'A' => 
+        array (
+            'App\\' => 4,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -152,18 +156,21 @@ class ComposerStaticInit07fdc439b1832f50b08e19b7b0de2634
         ),
         'Doctrine\\Common\\' => 
         array (
-            0 => __DIR__ . '/..' . '/doctrine/event-manager/src',
-            1 => __DIR__ . '/..' . '/doctrine/common/src',
+            0 => __DIR__ . '/..' . '/doctrine/common/src',
+            1 => __DIR__ . '/..' . '/doctrine/event-manager/src',
         ),
-    );
-
-    public static $fallbackDirsPsr0 = array (
-        0 => __DIR__ . '/../..' . '/config/yml',
+        'App\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/src',
+        ),
     );
 
     public static $classMap = array (
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Composer\\InstalledVersions' => __DIR__ . '/..' . '/composer/InstalledVersions.php',
+        'EquipoBidireccional' => __DIR__ . '/../..' . '/src/EquipoBidireccional.php',
+        'Instalacion' => __DIR__ . '/../..' . '/src/Instalacion.php',
+        'JugadorBidireccional' => __DIR__ . '/../..' . '/src/JugadorBidireccional.php',
         'Normalizer' => __DIR__ . '/..' . '/symfony/polyfill-intl-normalizer/Resources/stubs/Normalizer.php',
         'PhpToken' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/PhpToken.php',
         'Stringable' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Stringable.php',
@@ -177,7 +184,6 @@ class ComposerStaticInit07fdc439b1832f50b08e19b7b0de2634
         return \Closure::bind(function () use ($loader) {
             $loader->prefixLengthsPsr4 = ComposerStaticInit07fdc439b1832f50b08e19b7b0de2634::$prefixLengthsPsr4;
             $loader->prefixDirsPsr4 = ComposerStaticInit07fdc439b1832f50b08e19b7b0de2634::$prefixDirsPsr4;
-            $loader->fallbackDirsPsr0 = ComposerStaticInit07fdc439b1832f50b08e19b7b0de2634::$fallbackDirsPsr0;
             $loader->classMap = ComposerStaticInit07fdc439b1832f50b08e19b7b0de2634::$classMap;
 
         }, null, ClassLoader::class);

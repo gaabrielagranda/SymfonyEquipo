@@ -1,18 +1,38 @@
 <?php
 // bootstrap.php
-// Include Composer Autoload (relative to project root).
 require_once "vendor/autoload.php";
+
 use Doctrine\ORM\Tools\Setup;
 use Doctrine\ORM\EntityManager;
-$paths = array("./src");
+
+// Rutas donde están las entidades
+$paths = array("./src/Entity"); // Cambié a src/Entity
+
+// Modo desarrollo
 $isDevMode = true;
-// configuración de la base de datos
+
+// Configuración de la base de datos
 $dbParams = array(
     'driver'   => 'pdo_mysql',
     'user'     => 'root',
     'password' => '',
     'dbname'   => 'doctrine',
-	'host' => 'localhost',
+    'host'     => 'localhost',
 );
-$config = Setup::createAnnotationMetadataConfiguration($paths, $isDevMode, null, null, false);
+
+// Configuración de Doctrine
+$proxyDir = __DIR__ . '/var/proxies'; // Directorio de proxies
+if (!is_dir($proxyDir)) {
+    mkdir($proxyDir, 0777, true); // Crear directorio si no existe
+}
+
+$config = Setup::createAnnotationMetadataConfiguration(
+    $paths, 
+    $isDevMode, 
+    $proxyDir, // Directorio de proxies
+    null, 
+    false
+);
+
+// Crear el EntityManager
 $entityManager = EntityManager::create($dbParams, $config);

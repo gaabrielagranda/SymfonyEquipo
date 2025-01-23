@@ -1,8 +1,6 @@
 <?php
-//namespace App;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
-
 /**
  * @ORM\Entity
  * @ORM\Table(name="instalaciones")
@@ -32,12 +30,13 @@ class Instalacion
     protected $capacidad;
 
     /** 
-     * @ORM\ManyToOne(targetEntity="App\Entity\Equipo") 
+     * @ORM\ManyToOne(targetEntity="App\Entity\Equipo", inversedBy="instalaciones")
      * @ORM\JoinColumn(name="equipo_id", referencedColumnName="id")
      **/
     protected $equipo;
 
     // Getters and setters...
+
     public function getId() {
         return $this->id;
     }

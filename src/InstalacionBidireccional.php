@@ -1,5 +1,5 @@
 <?php
-//namespace App;
+
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
@@ -7,7 +7,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Entity
  * @ORM\Table(name="instalaciones")
  **/
-class Instalacion
+class InstalacionBidireccional
 {
     /** 
      * @ORM\Id 
@@ -32,7 +32,7 @@ class Instalacion
     protected $capacidad;
 
     /** 
-     * @ORM\ManyToOne(targetEntity="App\Entity\Equipo") 
+     * @ORM\ManyToOne(targetEntity="App\Entity\EquipoBidireccional", inversedBy="instalaciones") 
      * @ORM\JoinColumn(name="equipo_id", referencedColumnName="id")
      **/
     protected $equipo;
