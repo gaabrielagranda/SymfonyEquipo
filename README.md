@@ -13,12 +13,12 @@ Este proyecto es una aplicación web para gestionar equipos, jugadores e instala
 
 1. Clona el repositorio en tu máquina local:
     ```sh
-    git clone https://github.com/tu-usuario/gestion-equipos.git
+    git clone https://github.com/tu-usuario/SymfonyEquipo.git
     ```
 
 2. Navega al directorio del proyecto:
     ```sh
-    cd gestion-equipos
+    cd SymfonyEquipo
     ```
 
 3. Instala las dependencias de Composer:
@@ -46,7 +46,7 @@ Este proyecto es una aplicación web para gestionar equipos, jugadores e instala
 
 1. Inicia el servidor web (si estás usando XAMPP, asegúrate de que Apache y MySQL estén en ejecución).
 
-2. Abre tu navegador web y navega a `http://localhost/gestion-equipos/crud/index.php`.
+2. Abre tu navegador web y navega a `http://localhost/SymfonyEquipo/crud/index.php`.
 
 3. Utiliza la interfaz para gestionar equipos, jugadores e instalaciones.
 
