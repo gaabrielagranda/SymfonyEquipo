@@ -1,32 +1,47 @@
 <?php
-// src/EquipoBidireccional.php
-//namespace App;
 use Doctrine\Common\Collections\ArrayCollection;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
- * @ORM\Entity @ORM\Table(name="equipo")
+ * @ORM\Entity
+ * @ORM\Table(name="equipo")
  **/
 class EquipoBidireccional
 {
-    /** @ORM\Id @ORM\Column(type="integer") @ORM\GeneratedValue **/
+    /** 
+     * @ORM\Id 
+     * @ORM\Column(type="integer") 
+     * @ORM\GeneratedValue 
+     **/
     private $id;
-    /** @ORM\Column(type="string") **/
+
+    /** 
+     * @ORM\Column(type="string") 
+     **/
     private $nombre;
-	/** @ORM\Column(type="integer") **/
-	private $fundacion;
-	/** @ORM\Column(type="integer") **/
-	private $socios;
-	/** @ORM\Column(type="string") **/
+
+    /** 
+     * @ORM\Column(type="integer") 
+     **/
+    private $fundacion;
+
+    /** 
+     * @ORM\Column(type="integer") 
+     **/
+    private $socios;
+
+    /** 
+     * @ORM\Column(type="string") 
+     **/
     private $ciudad;
-	
-	/**
+
+    /**
      * Un equipo tiene muchos jugadores
      * @ORM\OneToMany(targetEntity="JugadorBidireccional", mappedBy="equipo")
-     */
-	private $jugadores;
-	
-	public function __construct() {
+     **/
+    private $jugadores;
+
+    public function __construct() {
         $this->jugadores = new ArrayCollection();
     }
 	public function getJugadores()

@@ -38,6 +38,10 @@ class Instalacion
     protected $equipo;
 
     // Getters and setters...
+
+    public function __construct() {
+        $this->instalaciones = new ArrayCollection();
+    }
     public function getId() {
         return $this->id;
     }

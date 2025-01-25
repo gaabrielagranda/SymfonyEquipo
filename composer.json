@@ -12,7 +12,9 @@
         "classmap": [
             "src/EquipoBidireccional.php",
             "src/JugadorBidireccional.php",
-            "src/Instalacion.php"
+            "src/Instalacion.php",
+            "src/Equipo.php",
+            "src/Jugador.php"
         ]
     }
 }
