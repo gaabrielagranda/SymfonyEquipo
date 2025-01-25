@@ -25,7 +25,7 @@ $proxyDir = __DIR__ . '/var/proxies'; // Directorio de proxies
 if (!is_dir($proxyDir)) {
     mkdir($proxyDir, 0777, true); // Crear directorio si no existe
 }
-
+// Se crea la configuración de Doctrine porque se necesita el directorio de proxies para que funcionen las relaciones
 $config = Setup::createAnnotationMetadataConfiguration(
     $paths, 
     $isDevMode, 

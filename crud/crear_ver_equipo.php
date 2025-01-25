@@ -113,6 +113,9 @@ $equipos = $entityManager->getRepository('EquipoBidireccional')->findAll();
             document.getElementById('socios').value = socios;
             document.getElementById('ciudad').value = ciudad;
         }
-    </script>
+    </script><br>
+    <div>
+        <button onclick="location.href='index.php'">Volver al índice</button>
+    </div>
 </body>
 </html>
